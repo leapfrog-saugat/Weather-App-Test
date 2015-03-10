@@ -53,6 +53,7 @@
     [self setTodaysMaxTemperatureF:allWeatherInfo[keyWeatherInfo][indexFirstDay][keyMaxTempF]];
     
     [self setSecondDay:allWeatherInfo[keyWeatherInfo][indexSecondDay][keyDate]];
+    [self setSecondDayMaxTemperatureC:allWeatherInfo[keyWeatherInfo][indexSecondDay][keyMaxTempC]];
 
     return self;
 }
