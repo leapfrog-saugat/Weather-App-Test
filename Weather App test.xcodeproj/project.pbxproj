@@ -15,6 +15,7 @@
 		CD3690A31AA03A1300DB0EED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD3690A11AA03A1300DB0EED /* LaunchScreen.xib */; };
 		CD3690AF1AA03A1400DB0EED /* Weather_App_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3690AE1AA03A1400DB0EED /* Weather_App_testTests.m */; };
 		CD4BC3D61AAEDB4400AEC4DA /* WeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4BC3D51AAEDB4400AEC4DA /* WeatherData.m */; };
+		CD4BC3D91AAFD21500AEC4DA /* SGSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4BC3D81AAFD21500AEC4DA /* SGSearchBar.m */; };
 		CD62ED071AA706CF0085DC5C /* DisplayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD62ED061AA706CF0085DC5C /* DisplayVC.m */; };
 		CDAF67961AA976650037DC70 /* weatherDataFormat.json in Resources */ = {isa = PBXBuildFile; fileRef = CDAF67951AA976650037DC70 /* weatherDataFormat.json */; };
 		CDAF67991AA97BE80037DC70 /* WeatherData in Resources */ = {isa = PBXBuildFile; fileRef = CDAF67981AA97BE80037DC70 /* WeatherData */; };
@@ -47,6 +48,8 @@
 		CD3690AE1AA03A1400DB0EED /* Weather_App_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Weather_App_testTests.m; sourceTree = "<group>"; };
 		CD4BC3D41AAEDB4400AEC4DA /* WeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherData.h; sourceTree = "<group>"; };
 		CD4BC3D51AAEDB4400AEC4DA /* WeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherData.m; sourceTree = "<group>"; };
+		CD4BC3D71AAFD21500AEC4DA /* SGSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSearchBar.h; sourceTree = "<group>"; };
+		CD4BC3D81AAFD21500AEC4DA /* SGSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSearchBar.m; sourceTree = "<group>"; };
 		CD62ED051AA706CF0085DC5C /* DisplayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayVC.h; sourceTree = "<group>"; };
 		CD62ED061AA706CF0085DC5C /* DisplayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayVC.m; sourceTree = "<group>"; };
 		CDAF67951AA976650037DC70 /* weatherDataFormat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = weatherDataFormat.json; path = ../weatherDataFormat.json; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				CD62ED061AA706CF0085DC5C /* DisplayVC.m */,
 				CD36909F1AA03A1300DB0EED /* Images.xcassets */,
 				CD36909C1AA03A1300DB0EED /* Main.storyboard */,
+				CD4BC3D71AAFD21500AEC4DA /* SGSearchBar.h */,
+				CD4BC3D81AAFD21500AEC4DA /* SGSearchBar.m */,
 				CD3690A11AA03A1300DB0EED /* LaunchScreen.xib */,
 				CD3690921AA03A1300DB0EED /* Supporting Files */,
 			);
@@ -264,6 +269,7 @@
 				CDB4400D1AA581BF004955E5 /* WeatherRequestData.m in Sources */,
 				CD4BC3D61AAEDB4400AEC4DA /* WeatherData.m in Sources */,
 				CD3690951AA03A1300DB0EED /* main.m in Sources */,
+				CD4BC3D91AAFD21500AEC4DA /* SGSearchBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
