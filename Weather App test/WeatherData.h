@@ -59,6 +59,15 @@
 @property (nonatomic, weak, readwrite) NSString *fifthDayMinTemperatureF;
 @property (nonatomic, weak, readwrite) NSString *fifthDayCondition;
 
+//All five days weather condition array
+@property (nonatomic, strong, readwrite) NSArray *maxTempCArray;
+@property (nonatomic, strong, readwrite) NSArray *minTempCArray;
+@property (nonatomic, strong, readwrite) NSArray *maxTempFArray;
+@property (nonatomic, strong, readwrite) NSArray *minTempFArray;
+
++ (instancetype)staticWeatherDataObject;
+
+
 
 
 @end

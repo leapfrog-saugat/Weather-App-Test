@@ -10,4 +10,11 @@
 
 @interface SGSearchBar : UIView
 
+@property (nonatomic, weak) UITextField *txtSearchBar;
+@property (nonatomic, unsafe_unretained) CGSize *size;
+@property (nonatomic, weak) UIImage *imgSearchImage;
+
+- (instancetype) initWithImage;
+- (instancetype) initWithSize;
+
 @end

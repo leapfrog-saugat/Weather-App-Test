@@ -8,10 +8,13 @@
 
 #import "ViewController.h"
 #import "WeatherRequestData.h"
+#import "WeatherData.h"
 #import "DisplayVC.h"
 
 
 @interface ViewController ()
+
+@property (strong, nonatomic) WeatherData *objWeatherData;
 @property (weak, nonatomic) IBOutlet UILabel *lblCellLabel;
 
 
@@ -37,6 +40,8 @@
 NSArray *recipes;
 NSArray *imageNames;
 
+
+
 //--------------------------------------------------------------------------------------------------
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:TRUE];
@@ -47,7 +52,12 @@ NSArray *imageNames;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _objWeatherData = [WeatherData staticWeatherDataObject];
+    
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //Testing New Weather Data Model object
+    
     
     //Testing TableViewController
     
@@ -87,8 +97,7 @@ NSArray *imageNames;
     dispatch_async(dispatch_get_main_queue(),^{
         _weatherDataVC = [[NSDictionary alloc] initWithDictionary:[weakWeatherData fetchCurrentData]];
         [self displayData:_weatherDataVC];
-        _lblCurrentHumidity.text = @"Testing Humidity";
-        
+                
     });
     
 }
@@ -133,9 +142,9 @@ NSArray *imageNames;
     //lblDay.text = @"Label inside cell";
     lblDay.text = [NSString stringWithFormat:@"%@", [recipes objectAtIndex:indexPath.row]];
     UILabel *lblMaxTemperature = (UILabel *)[cell viewWithTag:102];
-    lblMaxTemperature.text = @"23";
+    lblMaxTemperature.text = [[_objWeatherData maxTempCArray] objectAtIndex:indexPath.row];
     UILabel *lblMinTemperature = (UILabel *)[cell viewWithTag:103];
-    lblMinTemperature.text = @"9";
+    lblMinTemperature.text = _objWeatherData.secondDayMinTemperatureC;
     
     
     
@@ -155,10 +164,15 @@ NSArray *imageNames;
     // Dispose of any resources that can be recreated.
 }
 
+- (void)displayData{
+    _lblCurrentTemp.text = _objWeatherData.currentTemperatureC;
+}
+
 - (void)displayData:(NSDictionary*)weatherData{
     //[self displayImage];
     NSDictionary* currentWeatherDataDictionary = [[NSDictionary alloc] initWithDictionary:weatherData];
-    _lblCurrentTemp.text = [NSString stringWithFormat:@"%@˚C",currentWeatherDataDictionary[@"temp_C"]];
+    //_lblCurrentTemp.text = [NSString stringWithFormat:@"%@˚C",currentWeatherDataDictionary[@"temp_C"]];
+    _lblCurrentTemp.text = _objWeatherData.currentTemperatureC;
     _lblCurrentHumidity.text = [NSString stringWithFormat:@"Humidity: %@", currentWeatherDataDictionary[@"humidity"]];
     
     _lblCurrentCondition.text = [NSString stringWithFormat:@"%@", currentWeatherDataDictionary[@"weatherDesc"][0][@"value"]];
